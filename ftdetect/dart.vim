@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.dart set filetype=dart
+au BufNewFile,BufRead *.dart setfiletype=dart
