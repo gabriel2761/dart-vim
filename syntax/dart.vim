@@ -1,7 +1,8 @@
 if exists("b:current_syntax")
-    finish
+  finish
 endif
 
-echom "Our syntax highlighting code will go here."
+syntax keyword dartKeyword for if
+highlight link dartKeyword Keyword
 
 let b:current_syntax = "dart"
