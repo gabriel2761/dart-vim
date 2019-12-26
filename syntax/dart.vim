@@ -8,6 +8,7 @@ syntax keyword dartKeyword class abstract this extends implements with new
 syntax keyword dartKeyword factory mixin super interface
 syntax keyword dartKeyword async await sync
 syntax keyword dartKeyword var final dynamic int String bool null void
+syntax keyword dartKeyword const return
 syntax keyword dartKeyword true false
 syntax keyword dartKeyword get set
 syntax keyword dartKeyword try catch throw finally assert rethrow
