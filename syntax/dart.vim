@@ -14,6 +14,12 @@ syntax keyword dartKeyword get set
 syntax keyword dartKeyword try catch throw finally assert rethrow
 syntax keyword dartKeyword import
 
+syntax match dartComment "\/\/.*"
+
+syntax match dartString "(["'])(?:(?=(\\?))\2.)*?\1"
+
 highlight link dartKeyword Keyword
+highlight link dartComment Comment
+highlight link dartString String
 
 let b:current_syntax = "dart"
