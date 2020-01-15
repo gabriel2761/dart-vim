@@ -15,8 +15,8 @@ syntax keyword dartKeyword try catch throw finally assert rethrow
 syntax keyword dartKeyword import
 
 syntax match dartComment "\/\/.*"
-
-syntax match dartString "(["'])(?:(?=(\\?))\2.)*?\1"
+syntax match dartString "'(.*?)'"
+syntax match dartString '"(.*?)"'
 
 highlight link dartKeyword Keyword
 highlight link dartComment Comment
