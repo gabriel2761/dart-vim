@@ -14,18 +14,29 @@ syntax keyword dartKeyword get set as is
 syntax keyword dartKeyword try catch throw finally assert rethrow
 syntax keyword dartKeyword import typedef yeild covariant deffered
 
+" Annotations
 syntax region dartPreProc start=/\v\@/ skip=/\v\\./ end=/\v\s/
 
-syntax match dartComment "\v\/\/.*$"
+" Comments
+syntax keyword dartTodo contained TODO
+syntax match dartComment "\v\/\/.*$" contains=dartTodo
 syntax region dartComment start=/\v\/\*/ skip=/\v\\\*/ end=/\v*\//
 
-syntax region dartString start=/\v"/ skip=/\v\\./ end=/\v"/
-syntax region dartString start=/\v'/ skip=/\v\\./ end=/\v'/
+" Strings
+syntax region dartInterpolation contained start=/\v\$\{/ skip=/\v\\./ end=/\v\}/
+syntax region dartString start=/\v"/ skip=/\v\\./ end=/\v"/ contains=dartInterpolation
+syntax region dartString start=/\v'/ skip=/\v\\./ end=/\v'/ contains=dartInterpolation
 
+" Numbers
+syntax match dartNumber "\<\d\+\(\.\d\+\)\=\>"
 
-highlight link dartKeyword Keyword
 highlight link dartComment Comment
-highlight link dartString String
+highlight link dartInterpolation PreProc
+highlight link dartKeyword Keyword
+highlight link dartNumber Number
 highlight link dartPreProc PreProc
+highlight link dartString String
+highlight link dartTodo Todo
+highlight link dartType Type
 
 let b:current_syntax = "dart"
