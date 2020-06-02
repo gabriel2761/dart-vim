@@ -7,7 +7,7 @@ syntax keyword dartKeyword if else switch case default break
 syntax keyword dartKeyword class abstract this extends implements with new
 syntax keyword dartKeyword factory mixin super interface
 syntax keyword dartKeyword async await sync on operator part show
-syntax keyword dartKeyword var final dynamic int bool void double enum
+syntax keyword dartKeyword var final dynamic int String bool void double enum
 syntax keyword dartKeyword const return static export external Function hide
 syntax keyword dartKeyword get set as is
 syntax keyword dartKeyword try catch throw finally assert rethrow
